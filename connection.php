@@ -1,8 +1,9 @@
 <?php
-	define('hostname', 'localhost');
-	define('user', 'root');
-	define('password', '');
-	define('databaseName', 'androiddb');
+	$hostname = getenv('MYSQL_SERVICE_HOST');
+	$port = getenv('MYSQL_SERVICE_PORT');
+	$username = getenv('username');
+	$password = getenv('password');
+        $database = getenv('database');
 	
-	$connect = mysqli_connect(hostname, user, password, databaseName);
+	$connect = mysqli_connect($hostname, $username, $password, $database);
 ?>
